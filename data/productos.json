@@ -21,4 +21,37 @@
       "Diámetro: 12 pulgadas"
     ]
   }
+    {
+    "id": "sierra-1",
+    "nombre": "Sierra Circular 12”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  }
+    {
+    "id": "sierra-1",
+    "nombre": "Sierra Circular 12”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  }
+    {
+    "id": "sierra-1",
+    "nombre": "Sierra Circular 12”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  }
 ]

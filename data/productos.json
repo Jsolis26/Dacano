@@ -1,0 +1,24 @@
+[
+  {
+    "id": "cuchilla-industrial-1",
+    "nombre": "Cuchilla Industrial 10”",
+    "descripcion": "Cuchilla de alta precisión para cortes industriales.",
+    "imagen": "assets/img/producto1.jpg",
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas",
+      "Uso: Corte industrial"
+    ]
+  },
+  {
+    "id": "sierra-circular-12",
+    "nombre": "Sierra Circular 12”",
+    "descripcion": "Sierra profesional para cortes en madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas",
+      "Uso: Carpintería"
+    ]
+  }
+]

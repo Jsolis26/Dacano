@@ -22,8 +22,8 @@
     ]
   }
     {
-    "id": "sierra-1",
-    "nombre": "Sierra Circular 12”",
+    "id": "sierra-2",
+    "nombre": "Sierra Circular 14”",
     "descripcion": "Sierra profesional para madera.",
     "imagen": "assets/img/producto2.jpg",
     "destacado": true,
@@ -33,8 +33,8 @@
     ]
   }
     {
-    "id": "sierra-1",
-    "nombre": "Sierra Circular 12”",
+    "id": "sierra-3",
+    "nombre": "Sierra Circular 10”",
     "descripcion": "Sierra profesional para madera.",
     "imagen": "assets/img/producto2.jpg",
     "destacado": true,
@@ -44,8 +44,8 @@
     ]
   }
     {
-    "id": "sierra-1",
-    "nombre": "Sierra Circular 12”",
+    "id": "sierra-4",
+    "nombre": "Sierra Circular 16”",
     "descripcion": "Sierra profesional para madera.",
     "imagen": "assets/img/producto2.jpg",
     "destacado": true,
@@ -55,3 +55,4 @@
     ]
   }
 ]
+

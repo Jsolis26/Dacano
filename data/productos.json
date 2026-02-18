@@ -20,7 +20,7 @@
       "Material: Carburo",
       "Diámetro: 12 pulgadas"
     ]
-  }
+  },
     {
     "id": "sierra-2",
     "nombre": "Sierra Circular 14”",
@@ -31,7 +31,7 @@
       "Material: Carburo",
       "Diámetro: 12 pulgadas"
     ]
-  }
+  },
     {
     "id": "sierra-3",
     "nombre": "Sierra Circular 10”",
@@ -55,4 +55,5 @@
     ]
   }
 ]
+
 

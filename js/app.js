@@ -5,7 +5,7 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 if(menuToggle){
     menuToggle.addEventListener('click', () => {
-        mobileMenu.style.display = 
+        mobileMenu.style.display =
             mobileMenu.style.display === 'flex' ? 'none' : 'flex';
     });
 }
@@ -39,8 +39,30 @@ if(prev){
     });
 }
 
-// Auto slide
 setInterval(() => {
     index++;
     showSlide(index);
 }, 5000);
+
+// CARGAR PRODUCTOS DESTACADOS
+
+fetch('data/productos.json')
+.then(res => res.json())
+.then(productos => {
+
+    const destacadosContainer = document.getElementById('destacados-container');
+
+    if(destacadosContainer){
+        const destacados = productos.filter(p => p.destacado === true).slice(0,5);
+
+        destacados.forEach(producto => {
+            destacadosContainer.innerHTML += `
+                <div class="destacado-card" onclick="window.location.href='producto.html?id=${producto.id}'">
+                    <img src="${producto.imagen}">
+                    <h3>${producto.nombre}</h3>
+                </div>
+            `;
+        });
+    }
+
+});

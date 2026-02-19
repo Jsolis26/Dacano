@@ -87,3 +87,18 @@ fetch('data/productos.json')
 
 });
 
+// BUSCADOR GLOBAL FUNCIONAL
+
+const globalSearch = document.getElementById('globalSearch');
+
+if(globalSearch){
+    globalSearch.addEventListener('keypress', function(e){
+        if(e.key === "Enter"){
+            const termino = globalSearch.value.trim();
+            if(termino !== ""){
+                window.location.href = `catalogo.html?search=${encodeURIComponent(termino)}`;
+            }
+        }
+    });
+}
+

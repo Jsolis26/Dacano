@@ -73,6 +73,7 @@ if(slides){
 fetch('data/productos.json')
 .then(res => res.json())
 .then(productos => {
+    productosGlobales = productos;
 
     // ===== DESTACADOS (HOME) =====
 
@@ -224,15 +225,19 @@ function generarPaginacion(totalProductos, productosPorPagina, paginaActual, con
     container.innerHTML += paginacionHTML;
 }
 
+let productosGlobales = [];
+
 function cambiarPagina(pagina, containerId){
-    fetch('data/productos.json')
-    .then(res => res.json())
-    .then(productos => {
-        const container = document.getElementById(containerId);
-        mostrarProductos(productos, container, pagina);
-    });
+
+    const container = document.getElementById(containerId);
+
+    if(productosGlobales.length > 0){
+        mostrarProductos(productosGlobales, container, pagina);
+    }
 }
+
     
 });
+
 
 

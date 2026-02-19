@@ -1,3 +1,4 @@
+let productosGlobales = [];
 document.addEventListener("DOMContentLoaded", function(){
 
 // ================= MENU MOBILE =================
@@ -177,9 +178,6 @@ if(globalSearch){
         }
     });
 }
-
-let productosGlobales = [];
-
    
 });
 
@@ -238,6 +236,7 @@ function cambiarPagina(pagina, containerId){
         mostrarProductos(productosGlobales, container, pagina);
     }
 }
+
 
 
 

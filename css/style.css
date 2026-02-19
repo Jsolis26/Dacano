@@ -359,7 +359,7 @@ body {
 
     .slider {
         aspect-ratio: auto;
-        height: 55vh;
+        height: 45vh;
         min-height: 300px;
     }
     
@@ -486,6 +486,7 @@ body {
         display: none;
     }
 }
+
 
 
 

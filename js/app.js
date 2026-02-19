@@ -1,4 +1,6 @@
-// MENU MOBILE
+document.addEventListener("DOMContentLoaded", function(){
+
+// ================= MENU MOBILE =================
 
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -10,7 +12,7 @@ if(menuToggle){
     });
 }
 
-// BUSCADOR OVERLAY
+// ================= BUSCADOR OVERLAY =================
 
 const searchToggle = document.getElementById('searchToggle');
 const searchOverlay = document.getElementById('searchOverlay');
@@ -29,8 +31,7 @@ if(searchOverlay){
     });
 }
 
-
-// SLIDER
+// ================= SLIDER =================
 
 const slides = document.querySelector('.slides');
 const slide = document.querySelectorAll('.slide');
@@ -40,6 +41,7 @@ const prev = document.querySelector('.prev');
 let index = 0;
 
 function showSlide(i){
+    if(!slides) return;
     if(i >= slide.length) index = 0;
     if(i < 0) index = slide.length - 1;
     slides.style.transform = `translateX(-${index * 100}%)`;
@@ -59,16 +61,20 @@ if(prev){
     });
 }
 
-setInterval(() => {
-    index++;
-    showSlide(index);
-}, 5000);
+if(slides){
+    setInterval(() => {
+        index++;
+        showSlide(index);
+    }, 5000);
+}
 
-// CARGAR PRODUCTOS DESTACADOS
+// ================= CARGAR DATOS =================
 
 fetch('data/productos.json')
 .then(res => res.json())
 .then(productos => {
+
+    // ===== DESTACADOS (HOME) =====
 
     const destacadosContainer = document.getElementById('destacados-container');
 
@@ -77,7 +83,8 @@ fetch('data/productos.json')
 
         destacados.forEach(producto => {
             destacadosContainer.innerHTML += `
-                <div class="destacado-card" onclick="window.location.href='producto.html?id=${producto.id}'">
+                <div class="destacado-card"
+                onclick="window.location.href='producto.html?id=${producto.id}'">
                     <img src="${producto.imagen}">
                     <h3>${producto.nombre}</h3>
                 </div>
@@ -85,28 +92,7 @@ fetch('data/productos.json')
         });
     }
 
-});
-
-// BUSCADOR GLOBAL FUNCIONAL
-
-const globalSearch = document.getElementById('globalSearch');
-
-if(globalSearch){
-    globalSearch.addEventListener('keypress', function(e){
-        if(e.key === "Enter"){
-            const termino = globalSearch.value.trim();
-            if(termino !== ""){
-                window.location.href = `catalogo.html?search=${encodeURIComponent(termino)}`;
-            }
-        }
-    });
-}
-
-// CARGAR CATALOGO Y FILTRAR SI HAY BUSQUEDA
-
-fetch('data/productos.json')
-.then(res => res.json())
-.then(productos => {
+    // ===== CATALOGO =====
 
     const container = document.getElementById('productos-container');
 
@@ -124,18 +110,83 @@ fetch('data/productos.json')
         }
 
         mostrarProductos(productosAMostrar, container);
+
+        const buscador = document.getElementById('buscador');
+        if(buscador){
+            buscador.addEventListener('keyup', e => {
+                const texto = e.target.value.toLowerCase();
+                const filtrados = productos.filter(p =>
+                    p.nombre.toLowerCase().includes(texto)
+                );
+                mostrarProductos(filtrados, container);
+            });
+        }
+    }
+
+    // ===== PRODUCTO INDIVIDUAL =====
+
+    const detalle = document.getElementById('detalle-producto');
+
+    if(detalle){
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+
+        const producto = productos.find(p => p.id === id);
+
+        if(producto){
+            detalle.innerHTML = `
+                <h2>${producto.nombre}</h2>
+                <img src="${producto.imagen}" style="width:100%;max-width:400px;">
+                <p>${producto.descripcion}</p>
+                <h3>Especificaciones</h3>
+                <ul>
+                    ${producto.especificaciones.map(e => `<li>${e}</li>`).join('')}
+                </ul>
+                <a class="btn" target="_blank"
+                href="https://wa.me/50688888888?text=Hola quiero cotizar ${producto.nombre}">
+                Solicitar cotización
+                </a>
+            `;
+        }
     }
 
 });
+
+// ================= BUSCADOR GLOBAL =================
+
+const globalSearch = document.getElementById('globalSearch');
+
+if(globalSearch){
+    globalSearch.addEventListener('keypress', function(e){
+        if(e.key === "Enter"){
+            const termino = globalSearch.value.trim();
+            if(termino !== ""){
+                window.location.href =
+                `catalogo.html?search=${encodeURIComponent(termino)}`;
+            }
+        }
+    });
+}
+
+// ================= FUNCION CATALOGO =================
 
 function mostrarProductos(productos, container){
     container.innerHTML = "";
 
     productos.forEach(producto => {
         container.innerHTML += `
-            <div class="product-card">
+            <div class="destacado-card">
                 <img src="${producto.imagen}">
                 <h3>${producto.nombre}</h3>
                 <p>${producto.descripcion}</p>
-                <a class="btn" href="producto.html?id=${producto.id}">
+                <a class="btn"
+                href="producto.html?id=${producto.id}">
+                Ver detalle
+                </a>
+            </div>
+        `;
+    });
+}
 
+});

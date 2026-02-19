@@ -352,3 +352,47 @@ body {
         justify-content: center;
     }
 }
+
+/* ================= PRODUCTO DETALLE ================= */
+
+.producto-detalle {
+    padding: 60px 0;
+}
+
+.producto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.producto-imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+}
+
+.producto-info h2 {
+    margin-bottom: 15px;
+}
+
+.producto-descripcion {
+    margin-bottom: 20px;
+}
+
+.producto-info ul {
+    margin-bottom: 20px;
+}
+
+/* Responsive producto */
+
+@media (max-width: 768px) {
+    .producto-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .producto-imagen img {
+        max-width: 100%;
+    }
+}

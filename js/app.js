@@ -178,6 +178,11 @@ if(globalSearch){
     });
 }
 
+let productosGlobales = [];
+
+   
+});
+
 // ================= FUNCION CATALOGO =================
 
 function mostrarProductos(productos, container, pagina = 1){
@@ -225,8 +230,6 @@ function generarPaginacion(totalProductos, productosPorPagina, paginaActual, con
     container.innerHTML += paginacionHTML;
 }
 
-let productosGlobales = [];
-
 function cambiarPagina(pagina, containerId){
 
     const container = document.getElementById(containerId);
@@ -236,8 +239,6 @@ function cambiarPagina(pagina, containerId){
     }
 }
 
-    
-});
 
 
 

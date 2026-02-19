@@ -14,7 +14,10 @@ body {
 .header {
     background: #111;
     color: white;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
 }
 
 .header-container {
@@ -26,6 +29,9 @@ body {
 
 .menu-icon {
     justify-self: start;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .logo {
@@ -36,26 +42,10 @@ body {
     justify-self: end;
 }
 
-.logo {
-    flex: 1;
-    text-align: center;
-}
-
 .logo img {
     height: 55px;
     max-width: 220px;
     object-fit: contain;
-}
-
-.menu-icon {
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.search-box input {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 3px;
 }
 
 /* MOBILE MENU */
@@ -262,11 +252,7 @@ body {
 }
 
 
-.header {
-    background: #111;
-    color: white;
-    position: relative;
-    border-bottom: 1px solid #222;
-}
+
+
 
 

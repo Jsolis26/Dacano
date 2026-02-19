@@ -76,6 +76,7 @@ body {
 .slider {
     position: relative;
     height: 65vh;
+    min-height: 450px; /* 👈 agrega esto */
     overflow: hidden;
     background: #333;
     color: white;
@@ -480,6 +481,7 @@ body {
         display: none;
     }
 }
+
 
 
 

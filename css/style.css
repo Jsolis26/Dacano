@@ -84,6 +84,7 @@ body {
 
 .slides {
     display: flex;
+    height: 100%; /* 👈 ESTA ES LA CLAVE */
     transition: transform 0.5s ease;
 }
 
@@ -482,6 +483,7 @@ body {
         display: none;
     }
 }
+
 
 
 

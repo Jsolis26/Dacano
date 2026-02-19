@@ -19,9 +19,21 @@ body {
 
 .header-container {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 15px 20px;
+}
+
+.menu-icon {
+    justify-self: start;
+}
+
+.logo {
+    justify-self: center;
+}
+
+.search-icon {
+    justify-self: end;
 }
 
 .logo {
@@ -249,5 +261,12 @@ body {
     cursor: pointer;
 }
 
+
+.header {
+    background: #111;
+    color: white;
+    position: relative;
+    border-bottom: 1px solid #222;
+}
 
 

@@ -10,6 +10,26 @@ if(menuToggle){
     });
 }
 
+// BUSCADOR OVERLAY
+
+const searchToggle = document.getElementById('searchToggle');
+const searchOverlay = document.getElementById('searchOverlay');
+
+if(searchToggle){
+    searchToggle.addEventListener('click', () => {
+        searchOverlay.classList.toggle('active');
+    });
+}
+
+if(searchOverlay){
+    searchOverlay.addEventListener('click', (e) => {
+        if(e.target === searchOverlay){
+            searchOverlay.classList.remove('active');
+        }
+    });
+}
+
+
 // SLIDER
 
 const slides = document.querySelector('.slides');
@@ -66,3 +86,4 @@ fetch('data/productos.json')
     }
 
 });
+

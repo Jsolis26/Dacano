@@ -75,8 +75,8 @@ body {
 
 .slider {
     position: relative;
-    height: 65vh;
-    min-height: 450px; /* 👈 agrega esto */
+    width: 100%;
+    aspect-ratio: 1920 / 720; /* 👈 PROPORCIÓN FIJA */
     overflow: hidden;
     background: #000;
     color: white;
@@ -360,10 +360,6 @@ body {
         font-size: 26px;
     }
 
-    .slider {
-        height: 60vh;
-    }
-
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -483,6 +479,7 @@ body {
         display: none;
     }
 }
+
 
 
 

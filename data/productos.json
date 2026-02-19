@@ -53,8 +53,207 @@
       "Material: Carburo",
       "Diámetro: 12 pulgadas"
     ]
+  },
+  {
+    "id": "cuchilla-2",
+    "nombre": "Cuchilla Industrial 12”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "sierra-5",
+    "nombre": "Sierra Circular 20”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  },
+    {
+    "id": "sierra-6",
+    "nombre": "Sierra Circular 22”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  },
+    {
+    "id": "sierra-7",
+    "nombre": "Sierra Circular 24”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  },
+    {
+    "id": "sierra-8",
+    "nombre": "Sierra Circular 26”",
+    "descripcion": "Sierra profesional para madera.",
+    "imagen": "assets/img/producto2.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Carburo",
+      "Diámetro: 12 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-3",
+    "nombre": "Cuchilla Industrial 14”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-4",
+    "nombre": "Cuchilla Industrial 16”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-5",
+    "nombre": "Cuchilla Industrial 18”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-6",
+    "nombre": "Cuchilla Industrial 20”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-7",
+    "nombre": "Cuchilla Industrial 22”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-8",
+    "nombre": "Cuchilla Industrial 24”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-9",
+    "nombre": "Cuchilla Industrial 26”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-10",
+    "nombre": "Cuchilla Industrial 28”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-11",
+    "nombre": "Cuchilla Industrial 30”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-12",
+    "nombre": "Cuchilla Industrial 32”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-13",
+    "nombre": "Cuchilla Industrial 34”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-14",
+    "nombre": "Cuchilla Industrial 36”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
+  },
+  {
+    "id": "cuchilla-15",
+    "nombre": "Cuchilla Industrial 38”",
+    "descripcion": "Cuchilla de alta precisión.",
+    "imagen": "assets/img/producto1.jpg",
+    "destacado": true,
+    "especificaciones": [
+      "Material: Acero reforzado",
+      "Diámetro: 10 pulgadas"
+    ]
   }
 ]
+
 
 
 

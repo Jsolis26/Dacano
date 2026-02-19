@@ -145,19 +145,30 @@ if(todosContainer){
         const producto = productos.find(p => p.id === id);
 
         if(producto){
-            detalle.innerHTML = `
-                <h2>${producto.nombre}</h2>
-                <img src="${producto.imagen}" style="width:100%;max-width:400px;">
-                <p>${producto.descripcion}</p>
-                <h3>Especificaciones</h3>
-                <ul>
-                    ${producto.especificaciones.map(e => `<li>${e}</li>`).join('')}
-                </ul>
-                <a class="btn" target="_blank"
-                href="https://wa.me/50688888888?text=Hola quiero cotizar ${producto.nombre}">
-                Solicitar cotización
-                </a>
-            `;
+           detalle.innerHTML = `
+    <div class="producto-grid">
+
+        <div class="producto-imagen">
+            <img src="${producto.imagen}">
+        </div>
+
+        <div class="producto-info">
+            <h2>${producto.nombre}</h2>
+            <p class="producto-descripcion">${producto.descripcion}</p>
+
+            <h3>Especificaciones</h3>
+            <ul>
+                ${producto.especificaciones.map(e => `<li>${e}</li>`).join('')}
+            </ul>
+
+            <a class="btn" target="_blank"
+            href="https://wa.me/50688888888?text=Hola quiero cotizar ${producto.nombre}">
+            Solicitar cotización
+            </a>
+        </div>
+
+    </div>
+`;
         }
     }
 
@@ -242,6 +253,7 @@ function cambiarPagina(pagina, containerId){
         mostrarProductos(productosGlobales, container, pagina);
     }
 }
+
 
 
 

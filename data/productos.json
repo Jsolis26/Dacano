@@ -3,7 +3,7 @@
     "id": "cuchilla-1",
     "nombre": "Cuchilla Industrial 10”",
     "descripcion": "Cuchilla de alta precisión.",
-    "imagen": "assets/img/producto1.jpg",
+    "imagen": "assets/img/prueba.jpg",
     "destacado": true,
     "especificaciones": [
       "Material: Acero reforzado",
@@ -253,6 +253,7 @@
     ]
   }
 ]
+
 
 
 

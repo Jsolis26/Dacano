@@ -204,10 +204,10 @@ function mostrarProductos(productos, container, pagina = 1){
         `;
     });
 
-    generarPaginacion(productos.length, productosPorPagina, pagina, container.id);
+    generarPaginacion(productos.length, productosPorPagina, pagina, container);
 }
 
-function generarPaginacion(totalProductos, productosPorPagina, paginaActual, containerId){
+function generarPaginacion(totalProductos, productosPorPagina, paginaActual, container){
 
     const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
 
@@ -216,7 +216,7 @@ function generarPaginacion(totalProductos, productosPorPagina, paginaActual, con
     for(let i = 1; i <= totalPaginas; i++){
         paginacionHTML += `
             <span class="pagina-btn ${i === paginaActual ? 'activa' : ''}"
-            onclick="cambiarPagina(${i}, '${containerId}')">
+            onclick="cambiarPagina(${i}, '${container.id}')">
             ${i}
             </span>
         `;
@@ -224,8 +224,14 @@ function generarPaginacion(totalProductos, productosPorPagina, paginaActual, con
 
     paginacionHTML += `</div>`;
 
-    const container = document.getElementById(containerId);
-    container.innerHTML += paginacionHTML;
+    // Elimina paginación anterior si existe
+    const paginacionExistente = container.parentElement.querySelector('.paginacion');
+    if(paginacionExistente){
+        paginacionExistente.remove();
+    }
+
+    // Insertar DESPUÉS del grid
+    container.insertAdjacentHTML('afterend', paginacionHTML);
 }
 
 function cambiarPagina(pagina, containerId){
@@ -236,6 +242,7 @@ function cambiarPagina(pagina, containerId){
         mostrarProductos(productosGlobales, container, pagina);
     }
 }
+
 
 
 

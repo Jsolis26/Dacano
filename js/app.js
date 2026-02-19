@@ -92,6 +92,14 @@ fetch('data/productos.json')
         });
     }
 
+    // ===== TODOS LOS PRODUCTOS (HOME) =====
+
+const todosContainer = document.getElementById('todos-container');
+
+if(todosContainer){
+    mostrarProductos(productos, todosContainer);
+}
+
     // ===== CATALOGO =====
 
     const container = document.getElementById('productos-container');
@@ -190,3 +198,4 @@ function mostrarProductos(productos, container){
 }
 
 });
+

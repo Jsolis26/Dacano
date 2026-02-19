@@ -13,6 +13,16 @@ if(menuToggle){
     });
 }
 
+    // Cerrar menú al hacer clic en un enlace
+const mobileLinks = document.querySelectorAll('#mobileMenu a');
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+    });
+});
+
+
 // ================= BUSCADOR OVERLAY =================
 
 const searchToggle = document.getElementById('searchToggle');
@@ -253,6 +263,7 @@ function cambiarPagina(pagina, containerId){
         mostrarProductos(productosGlobales, container, pagina);
     }
 }
+
 
 
 

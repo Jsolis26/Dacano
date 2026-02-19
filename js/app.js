@@ -179,23 +179,60 @@ if(globalSearch){
 
 // ================= FUNCION CATALOGO =================
 
-function mostrarProductos(productos, container){
+function mostrarProductos(productos, container, pagina = 1){
+
+    const productosPorPagina = 15;
+    const inicio = (pagina - 1) * productosPorPagina;
+    const fin = inicio + productosPorPagina;
+
+    const productosPaginados = productos.slice(inicio, fin);
+
     container.innerHTML = "";
 
-    productos.forEach(producto => {
+    productosPaginados.forEach(producto => {
         container.innerHTML += `
-            <div class="destacado-card">
+            <div class="destacado-card producto-card"
+            onclick="window.location.href='producto.html?id=${producto.id}'">
                 <img src="${producto.imagen}">
                 <h3>${producto.nombre}</h3>
                 <p>${producto.descripcion}</p>
-                <a class="btn"
-                href="producto.html?id=${producto.id}">
-                Ver detalle
-                </a>
             </div>
         `;
     });
+
+    generarPaginacion(productos.length, productosPorPagina, pagina, container.id);
 }
 
+function generarPaginacion(totalProductos, productosPorPagina, paginaActual, containerId){
+
+    const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
+
+    let paginacionHTML = `<div class="paginacion">`;
+
+    for(let i = 1; i <= totalPaginas; i++){
+        paginacionHTML += `
+            <span class="pagina-btn ${i === paginaActual ? 'activa' : ''}"
+            onclick="cambiarPagina(${i}, '${containerId}')">
+            ${i}
+            </span>
+        `;
+    }
+
+    paginacionHTML += `</div>`;
+
+    const container = document.getElementById(containerId);
+    container.innerHTML += paginacionHTML;
+}
+
+function cambiarPagina(pagina, containerId){
+    fetch('data/productos.json')
+    .then(res => res.json())
+    .then(productos => {
+        const container = document.getElementById(containerId);
+        mostrarProductos(productos, container, pagina);
+    });
+}
+    
 });
+
 

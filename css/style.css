@@ -118,7 +118,6 @@ body {
     background: #222;
 }
 
-
 .slider-controls {
     position: absolute;
     width: 100%;
@@ -139,7 +138,6 @@ body {
     max-width: 1100px;
     margin: 0 auto;
 }
-
 
 /* RESPONSIVE */
 
@@ -207,7 +205,6 @@ body {
     font-size: 16px;
 }
 
-
 /* ICONO LUPA */
 
 .search-icon {
@@ -259,6 +256,38 @@ body {
 .todos-productos h2 {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.producto-card {
+    cursor: pointer;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.paginacion {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pagina-btn {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagina-btn:hover {
+    background: #111;
+    color: white;
+}
+
+.pagina-btn.activa {
+    background: #111;
+    color: white;
 }
 
 

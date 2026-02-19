@@ -9,7 +9,7 @@ body {
     color: #111;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .header {
     background: #111;
@@ -38,17 +38,20 @@ body {
     justify-self: center;
 }
 
-.search-icon {
-    justify-self: end;
-}
-
 .logo img {
     height: 55px;
     max-width: 220px;
     object-fit: contain;
 }
 
-/* MOBILE MENU */
+.search-icon {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
 
 .mobile-menu {
     display: none;
@@ -63,7 +66,7 @@ body {
     border-top: 1px solid #333;
 }
 
-/* SLIDER */
+/* ================= SLIDER ================= */
 
 .slider {
     position: relative;
@@ -128,10 +131,13 @@ body {
     transform: translateY(-50%);
 }
 
-.prev, .next {
+.prev,
+.next {
     font-size: 30px;
     cursor: pointer;
 }
+
+/* ================= CONTAINER ================= */
 
 .container {
     width: 90%;
@@ -139,25 +145,7 @@ body {
     margin: 0 auto;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    .search-box {
-        display: none;
-    }
-
-    .slide-content h2 {
-        font-size: 26px;
-    }
-
-    .slider {
-        height: 60vh;
-    }
-
-}
-
-/* DESTACADOS */
+/* ================= DESTACADOS Y PRODUCTOS ================= */
 
 .destacados {
     padding: 60px 20px;
@@ -169,7 +157,6 @@ body {
     margin: 0 auto 40px auto;
     max-width: 1100px;
 }
-
 
 .destacados-grid {
     display: grid;
@@ -196,8 +183,6 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     border: 1px solid #ddd;
-}
-.destacado-card {
     border-radius: 6px;
     overflow: hidden;
 }
@@ -217,49 +202,6 @@ body {
     font-size: 16px;
 }
 
-/* ICONO LUPA */
-
-.search-icon {
-    font-size: 20px;
-    cursor: pointer;
-    text-align: right;
-}
-
-/* OVERLAY BUSCADOR */
-
-.search-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    padding: 40px 20px;
-    display: none;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.search-overlay.active {
-    display: flex;
-}
-
-.search-input {
-    width: 100%;
-    max-width: 600px;
-    padding: 15px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255,255,255,0.9);
-}
-
-.menu-icon,
-.search-icon {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .todos-productos {
     padding: 60px 20px;
     background: #fff;
@@ -274,9 +216,7 @@ body {
     cursor: pointer;
 }
 
-.producto-card:hover {
-    transform: translateY(-5px);
-}
+/* ================= PAGINACION ================= */
 
 .paginacion {
     margin-top: 40px;
@@ -302,8 +242,35 @@ body {
     color: white;
 }
 
+/* ================= OVERLAY BUSCADOR ================= */
 
-/* FOOTER */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    display: none;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.search-overlay.active {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* ================= FOOTER ================= */
 
 .footer {
     background: #111;
@@ -315,8 +282,12 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     align-items: center;
+}
+
+.footer-info {
+    text-align: left;
 }
 
 .footer-info h3 {
@@ -331,7 +302,7 @@ body {
 .footer-social {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .footer-logo {
@@ -342,7 +313,7 @@ body {
 .social-icons {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -357,29 +328,27 @@ body {
     opacity: 0.7;
 }
 
-/* Responsive Footer */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+    .slide-content h2 {
+        font-size: 26px;
+    }
+
+    .slider {
+        height: 60vh;
+    }
+
     .footer-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
     .footer-social {
-        text-align: center;
+        align-items: center;
     }
 
     .social-icons {
         justify-content: center;
     }
 }
-
-.footer-info {
-    text-align: left;
-}
-
-
-
-
-
-

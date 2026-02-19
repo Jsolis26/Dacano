@@ -356,6 +356,13 @@ body {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+
+    .slider {
+        aspect-ratio: auto;
+        height: 55vh;
+        min-height: 300px;
+    }
+    
     .slide-content h2 {
         font-size: 26px;
     }
@@ -479,6 +486,7 @@ body {
         display: none;
     }
 }
+
 
 
 

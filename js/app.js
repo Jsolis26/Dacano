@@ -102,3 +102,40 @@ if(globalSearch){
     });
 }
 
+// CARGAR CATALOGO Y FILTRAR SI HAY BUSQUEDA
+
+fetch('data/productos.json')
+.then(res => res.json())
+.then(productos => {
+
+    const container = document.getElementById('productos-container');
+
+    if(container){
+
+        const params = new URLSearchParams(window.location.search);
+        const searchParam = params.get('search');
+
+        let productosAMostrar = productos;
+
+        if(searchParam){
+            productosAMostrar = productos.filter(p =>
+                p.nombre.toLowerCase().includes(searchParam.toLowerCase())
+            );
+        }
+
+        mostrarProductos(productosAMostrar, container);
+    }
+
+});
+
+function mostrarProductos(productos, container){
+    container.innerHTML = "";
+
+    productos.forEach(producto => {
+        container.innerHTML += `
+            <div class="product-card">
+                <img src="${producto.imagen}">
+                <h3>${producto.nombre}</h3>
+                <p>${producto.descripcion}</p>
+                <a class="btn" href="producto.html?id=${producto.id}">
+

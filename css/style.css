@@ -408,4 +408,60 @@ body {
     }
 }
 
+/* ================= WHATSAPP FLOAT CON TEXTO ================= */
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.whatsapp-text {
+    background: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.whatsapp-text:hover {
+    transform: translateY(-2px);
+}
+
+.whatsapp-float {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* En móvil solo mostrar el botón redondo */
+
+@media (max-width: 768px) {
+    .whatsapp-text {
+        display: none;
+    }
+}
+
 

@@ -1,13 +1,19 @@
 [
   {
     "id": "cuchilla-1",
-    "nombre": "Cuchilla Industrial 10”",
-    "descripcion": "Cuchilla de alta precisión.",
+    "nombre": "Sierra Circular 350mm”",
+    "descripcion": "Sierras Principales Calzadas con Carburo de Tungsteno.",
     "imagen": "assets/img/prueba.jpg",
     "destacado": true,
     "especificaciones": [
-      "Material: Acero reforzado",
-      "Diámetro: 10 pulgadas"
+      "Sierra para Melamina",
+      "Marca: DACANO",
+      "Diámetro: 350mm",
+      "Grosor: 3,2mm",
+      "Eje: Según Necesidad",
+      "Calzas: 84",
+      "Calidad: ULTRA PREMIUM",
+      "Máquina: Seccionadora"
     ]
   },
   {
@@ -253,6 +259,7 @@
     ]
   }
 ]
+
 
 
 
